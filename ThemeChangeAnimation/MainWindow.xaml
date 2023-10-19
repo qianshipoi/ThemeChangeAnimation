@@ -1,0 +1,41 @@
+﻿<Window
+    x:Class="ThemeChangeAnimation.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ThemeChangeAnimation"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    mc:Ignorable="d">
+    <Grid x:Name="grid" Background="{DynamicResource MaterialDesignPaper}">
+        <TextBlock
+            VerticalAlignment="Center"
+            FontSize="42"
+            FontWeight="DemiBold"
+            Text="测试文字" />
+        <Button
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="Button_Click">
+            Change Theme
+        </Button>
+
+        <Image
+            x:Name="MaskImage"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Cursor=""
+            IsHitTestVisible="False"
+            Source="https://chat-api.kuriyama.top/Raw/nakuri.png"
+            Stretch="Fill"
+            Visibility="Collapsed" />
+    </Grid>
+</Window>
